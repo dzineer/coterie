@@ -14,7 +14,7 @@ require __DIR__ . '/../vendor/autoload.php';
 $containerBuilder = new ContainerBuilder();
 
 // Set up settings
-$settings = require __DIR__ . '/../config/settings.php';
+$settings = require __DIR__ . '/../config/settings.twig.php';
 $settings($containerBuilder);
 
 
