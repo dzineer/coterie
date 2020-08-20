@@ -1,4 +1,16 @@
 {
+    "name": "mf1tts/coterie",
+    "description": "Eventually a usable version of Montreal in Darkness Grapevine",
+    "keywords": [
+        "rework"
+    ],
+    "homepage": "http://github.com/mf1tts/coterie",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "not marion fitts"
+        }
+    ],
     "type": "project",
     "require": {
         "php": "^7.2",
@@ -13,5 +25,8 @@
         "psr-4": {
             "App\\": "src/"
         }
+    },    
+    "scripts": {
+        "start": "php -S localhost:8080 -t public"
     }
 }
