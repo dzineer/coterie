@@ -1,5 +1,6 @@
 .idea/
 .vscode/
 /vendor/
+/z_legacy/*
 /logs/*
 !/logs/README.md
