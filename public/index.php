@@ -14,8 +14,12 @@ require __DIR__ . '/../vendor/autoload.php';
 $containerBuilder = new ContainerBuilder();
 
 // Set up settings
-$settings = require __DIR__ . '/../config/settings.twig.php';
+$settings = require __DIR__ . '/../config/settings.php';
 $settings($containerBuilder);
+
+// Set up twig
+$twigsetup = require __DIR__ . '/../config/settings.twig.php';
+$twigsetup($containerBuilder);
 
 
 // Build PHP-DI Container instance
