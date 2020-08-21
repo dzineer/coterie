@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 use App\Application\Middleware\SessionMiddleware;
+use Slim\Views\TwigMiddleware;
 use Slim\App;
 
 return function (App $app) {
