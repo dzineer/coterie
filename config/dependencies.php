@@ -2,6 +2,11 @@
 declare(strict_types=1);
 
 use DI\ContainerBuilder;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
+use Monolog\Processor\UidProcessor;
+use Psr\Container\ContainerInterface;
+use Psr\Log\LoggerInterface;
 
 return function (ContainerBuilder $containerBuilder) {
     // Global Settings Object
@@ -20,13 +25,17 @@ return function (ContainerBuilder $containerBuilder) {
 
             return $logger;
         },
-        'settings' => array(
-            'displayErrorDetails' => true,
-            'logger' => [
-                'name' => 'slim-app',
-                'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
-                'level' => Logger::DEBUG,
-            ],
-        )
+        'view' => function() {
+            return Twig::create(__DIR__ . '/../templates',
+                ['cache' => __DIR__ . '/../cache']);
+        }
+        // 'db' => \Doctrine\DBAL\DriverManager::getConnection(
+        //     array(
+        //         'dbname' => 'grapevine',
+        //         'user' => 'user',
+        //         'password' => 'secret',
+        //         'host' => 'localhost',
+        //         'driver' => 'pdo_mysql',
+        // ))
     ]);
 };

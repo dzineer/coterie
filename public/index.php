@@ -17,9 +17,9 @@ $containerBuilder = new ContainerBuilder();
 $settings = require __DIR__ . '/../config/settings.php';
 $settings($containerBuilder);
 
-// Set up twig
-$twigsetup = require __DIR__ . '/../config/settings.twig.php';
-$twigsetup($containerBuilder);
+// Set up dependencies
+$dependencies = require __DIR__ . '/../config/dependencies.php';
+$dependencies($containerBuilder);
 
 
 // Build PHP-DI Container instance
