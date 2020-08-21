@@ -1,0 +1,38 @@
+{% extends "_layout_classic.twig" %}
+
+
+{% block head %}
+    {{ parent() }}
+    <style type="text/css">
+        /*Styles for the announcement board*/
+        #announcements {
+            width:650px;
+            height:600px;
+            overflow-y:auto;
+            overflow-x:hidden;
+            margin:20px;
+            padding:5px;
+        }
+        
+        #announcements h4 {
+            margin:0px;
+            padding:5px;
+            display:inline-block;
+        }
+        
+        #announcements .date {
+            font-size:90%;
+            font-style:italic;
+            margin:5px 30px;
+            float:right;
+        }
+        
+        #announcements .st {
+            float:right;
+        }
+        
+        #announcements hr {
+            border-color:#593202;
+        }
+    </style>
+{% endblock %}

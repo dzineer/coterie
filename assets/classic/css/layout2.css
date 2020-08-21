@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-color:#999999;/*Background color of the general body*/
+}
+
+#body_content {
+	margin-bottom:3em;
+	width:98%;
+}
+
+#banner {
+	display:none;
+}
+
+#change_char {
+	width:100%;
+	text-align:center;
+	border-color:#330f0f;/*Border color of the change character strip*/
+	padding:2px 0;
+	color:#360000;/*Text color*/
+	background-color:#525252;/*Background color*/
+	position:fixed;
+	bottom:0;
+	z-index:1;
+}
+
+#change_char select {
+	background-color:#993333;/*Color of the change character select*/
+}
+
+#change_char input[type=button], #change_char input[type=submit] {
+	background-color:#330f0f;/*Background color of the change character button*/
+	color:#cccccc;/*Text color*/
+	border:thin solid;
+	border-color:black;/*Border color*/
+	border-radius: 0.75em;
+	-moz-border-radius: 0.75em;
+	-webkit-border-radius: 0.75em;
+}
+
+#change_char input[type=button]:hover, #change_char input[type=submit]:hover {
+	background-color:#570208;/*Background color on hover*/
+	color:#996060;/*Text color*/
+	border-color:black;/*Border color*/
+}
+
+#navbar {
+	margin:0;
+	border-color:#333333;/*Border color of the navigation bar*/
+	border-style:solid none;
+	width:100%;
+	background-color:#440000;/*Default background color. Should match below*/
+}
+
+#navbar div {
+	display:inline-block;
+}
+
+#navbar a {
+	padding-left:20px;
+	padding-right:20px;
+	background-color:#440000;/*Default background color. Should match above*/
+	color:#cccccc;/*Text color*/
+}
+
+#navbar a:hover {
+	color:#ffcccc;/*Text color on hover*/
+	background-color:#330000;/*Background color on hover*/
+}
+
+#navbar a:active {
+	color:white;/*Text color on click*/
+}
+
+.hover span {
+	top:2.2em;
+	left:5px;
+	border-color:#333333;/*Border color of navigation bar pop-up menu*/
+	background-color:#330f0f;/*Background color*/
+}
+
+.hover2 span {
+	left:150px;
+	top:-5px;
+}
+
+.hover span a {
+	width:110px;
+}
+
+li {
+	list-style-type:none;
+}
+
+.container ul {
+	padding:0;
+	margin:0;
+}

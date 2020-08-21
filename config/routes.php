@@ -15,8 +15,9 @@ return function (App $app) {
     });
 
     $app->get('/', function (Request $request, Response $response) {
-        $response->getBody()->write('Hello world!');
-        return $response;
+        return $this->get('view')->render($response, 'index.twig', [
+            'user' => false
+        ]);
     });
 
     $app->group('/users', function (Group $group) {

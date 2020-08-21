@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	margin:0;
+	padding:0;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:black;
+}
+
+#body_content {
+	display:inline-block;
+	padding:10px;
+}
+
+#change_char {
+	font-weight:bold;
+	border-style:solid none;
+	border-width:5px;
+}
+
+#change_char span {
+	margin-right:50px;
+}
+
+#change_char select {
+	border-radius: 0.75em;
+	-moz-border-radius: 0.75em;
+	-webkit-border-radius: 0.75em;
+}
+
+#navbar {
+	border-width:5px;
+	vertical-align:top;
+	padding:0;
+}
+
+#navbar a {
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	display:inline-block;
+}
+
+.hover, .hover2 {
+	position:relative;
+}
+
+.hover span {
+	display:none;
+	position:absolute;
+	width:150px;
+	border-style:solid;
+	border-width:5px;
+	z-index:1;
+}
+
+.hover:hover span {
+	display:block;
+}
+
+.hover2 span {
+	display:none;
+}
+.hover:hover .hover2 span {
+	display:none;
+}
+.hover:hover .hover2:hover span {
+	display:block;
+}
+
+a {
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+a:active {
+	text-decoration:none;
+}
+
+#body_content a {
+	color:#660000;
+	font-weight:bold;
+}
+
+#body_content a:hover {
+	color:#333333;
+}
+
+#body_content a:active {
+	color:#ffffff;
+}
+
+
+hr {
+	clear:both;
+}
+
+input[type=button] {
+}
+
+input[type=button]:hover {
+}
+
+.content, .target {
+	overflow-y:auto;
+	overflow-x:hidden;
+	border:solid thin;
+	border-color:black;/*Border color of inset boxes*/
+	color:black;/*Text color*/
+	background-color:#cccccc;/*background color*/
+	height:200px;
+	width:20%;
+	margin:15px;
+	padding:0 10px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.content h4, .target h4, .short h4, #instructions h4 {
+	margin:0px;
+	padding:5px;
+	position:relative;
+	top:0px;
+	left:0px;
+	z-index:0;
+}
+
+
+table.borders{
+	border-collapse:collapse;
+}
+table.borders, .borders tr, .borders th, .borders td {
+	border:solid thin black;
+	padding:3px;
+}
+
+
+h1 {
+	color:#330000;
+}
+h2 {
+	color:#440000;
+}
+h3 {
+	color:#550000;
+}
+h4 {
+	color:#660000;
+}
+
+/*Display in multiple columns. Does not work in printing*/
+.cols2 {
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2; /* Safari and Chrome */
+	column-count:2;
+}
+.cols3 {
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+}
+.cols4 {
+	-moz-column-count:4; /* Firefox */
+	-webkit-column-count:4; /* Safari and Chrome */
+	column-count:4;
+}
+.cols5 {
+	-moz-column-count:5; /* Firefox */
+	-webkit-column-count:5; /* Safari and Chrome */
+	column-count:5;
+}

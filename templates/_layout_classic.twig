@@ -1,0 +1,37 @@
+<html>
+<head>
+    {% block head %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="assets/classic/css/layout1.css" type="text/css" />
+    <link rel="stylesheet" href="assets/classic/css/default.css" type="text/css" />
+    <link rel="shortcut icon" href="assets/classic/favicon.ico?v=2" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="assets/classic/default.js"></script>
+    <title>Montreal In Darkness</title>
+    {% endblock %}
+</head>
+
+<body>
+<div id="body">
+    <img src="assets/classic/banner.png" id="banner" />
+    <div id="change_char">
+
+    <span>Current Character is: {{ character.name|default('N/A') }}</span>
+    {# Change Character: 
+    <select id="selected_char">
+    <?php get_character_options($char_id); ?>
+    </select>
+    <input type="button" value="Change" onclick="change_char('')" /> #}
+    </div>
+
+    {% include '_navbar_classic.twig' %}
+
+    <div id="body_content">
+        {% block body_content %}
+        <h2>Hello World</h2>
+        {% endblock %}
+    </div>
+    <br style="clear:both" />
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<div id="navbar">
+{% if user %}
+	<div><a href="<?= root; ?>index.php">Home</a></div>
+
+    {% if user.is_st %}
+	<div class="hover"><a href="{{ url_for('storytellers') }}">Storyteller Home</a>
+		<span>
+        <a href="{{ url_for('storytellers/edit_rumors') }}">Edit Rumors</a>
+		<a href="{{ url_for('storytellers/char_list') }}">Character List</a>
+		<a href="{{ url_for('storytellers/add') }}" onclick="return confirm_add()">Add Character</a>
+		<a href="{{ url_for('storytellers/other') }}">Edit Other</a>
+        <a href="{{ url_for('storytellers/game_dates') }}">Game Date Manager</a>
+        </span></div>
+    {% endif %}
+
+    <div><a href="{{ url_for('select_sheets') }}">Character Sheets</a></div>
+    
+    {% if user.is_st %}
+    <div class="hover">
+        <a href="{{ url_for('sheets'), {'char_id': character.id} }}">{{character.name}}</a>
+    	<span>
+        <a href="{{ url_for('storytellers/edit_char'), {'char_id': character.id} }}">Edit {{character.name}}</a>
+        <a href="{{ url_for('storytellers/edit_influences'), {'char_id': character.id} }}">{{character.name}} Influences</a>
+		<a href="{{ url_for('storytellers/edit_boons'), {'char_id': character.id} }}">{{character.name}} Boons</a>
+        <a href="{{ url_for('rumors'), {'char_id': character.id} }}">{{character.name}} Rumors</a>
+        </span>
+    </div>
+    {% endif %}
+	{% if user.is_st == false %}
+        <div><a href="{{ url_for('sheets'), {'char_id': character.id} }}">{{character.name}}</a></div>
+    {% endif %}
+    
+	{# <div class="hover"><a href="<?= root; ?>influences/actions.php">Influences</a>
+		<span>
+		<div class="hover2"><a href="<?= root; ?>influences/influence_centers.php">Influence Centers</a>
+            <?php
+			$influences = get_influences($char_id);
+			
+			if (count($influences)) echo "<span>";
+			
+			foreach ($influences as $infl) {
+				echo '<a href="'.root.'influences/view_influence.php?id='.$infl['id'].'">'.$infl['category'].': '.$infl['center'].'</a>';
+			}
+			
+			if (count($influences)) echo "</span>";
+			?>
+        </div>
+		<a href="<?= root; ?>influences/actions.php">Actions</a>
+        <a href="<?= root; ?>influences/maps.php">Maps &amp; Leads</a>
+		<?php 
+		if (narrator()) {
+			echo '<a href="'.root.'influences/filter.php">Filter Centers</a>';
+		}?>
+		<a href="<?= root; ?>influences/influence_101.php">Influences 101</a>
+		<a href="<?= root; ?>influences/influence_102.php">Influences 102</a>
+        
+        <?php
+			if(st()) {
+				echo '<a href="';
+				echo root;
+				echo 'influences/edit_centers.php">Edit Centers</a>';
+			} ?>
+		</span></div>
+        
+        
+	<div class="hover"><a href="<?= root; ?>resources.php">Havens &amp; Resources</a>
+    	<span>
+        <a href="<?= root; ?>havens.php">Edit Havens</a>
+        </span></div>
+    <div><a href="<?= root; ?>news/">Ferret &amp; CRYPT</a></div>
+    <div><a href="<?= root; ?>contact.php">Contact</a></div>
+    <div><a href="<?= root; ?>forums/">Forums</a></div>
+	<div class="hover"><a href="<?= root; ?>rules/">Rules</a>
+    	<span>
+        <a href="<?= root; ?>rules/MiD,%20Rules%201.4,%20Player%20Release.zip">Rules Download</a>
+        <a href="<?= root; ?>rules/havens.pdf" target="_blank">Havens</a>
+        <a href="<?= root; ?>rules/default.php">The PLAN</a>
+        </span></div>
+        
+        
+    <div class="hover"><a>Setting</a>
+    	<span>
+        <a href="<?= root; ?>setting/Introduction.pdf" target="_blank">Introduction</a>
+        <a href="http://www.deathquaker.org/gaming/archetypes.html" target="_blank">List of Natures</a>
+        <a href="http://www.herpaderp.com/">About the Camarilla</a>
+        <!--div class="hover2"><a>Clans</a>
+        	<span>
+            <a href="< ?= root; ?>setting/clans.php?clan=brujah">Brujah</a>
+            <a href="< ?= root; ?>setting/clans.php?clan=gangrel">Gangrel</a>
+            <a href="< ?= root; ?>setting/clans.php?clan=malkavian">Malkavian</a>
+            <a href="< ?= root; ?>setting/clans.php?clan=nosferatu">Nosferatu</a>
+            <a href="< ?= root; ?>setting/clans.php?clan=toreador">Toreador</a>
+            <a href="< ?= root; ?>setting/clans.php?clan=tremere">Tremere</a>
+            <a href="< ?= root; ?>setting/clans.php?clan=ventrue">Ventrue</a>
+            </span></div-->
+        </span></div> #}
+        
+        
+	<div><a href="{{ url_for('player_info') }}">Password/Email</a></div>
+	<div><a href="{{ url_for('logout') }}">Log out</a></div>
+{% endif %}
+
+{% if user == false %}
+	<div><a href="{{ url_for('login') }}">Log In</a></div>
+{% endif %}
+</div>

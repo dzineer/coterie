@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+@media print {	
+	.character {
+		font-size:10px;
+		page-break-after:always;
+	}
+
+	.lastchar{
+		page-break-after:avoid;
+	}
+}
+
+@page {
+	width:8in;
+}
+
+body {
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+hr {
+	clear:both;
+}
+
+div {
+	margin:0px;
+}
+
+/*Text displays*/
+.character h1 {
+	text-align:center;
+	font-size:2em;
+}
+
+.character h2 {
+	text-align:center;
+	margin:0;
+}
+
+.character h3 {
+	text-align:center;
+	margin:0;
+}
+
+/*Used in the first few displays*/
+.info ul,.speed ul {
+	margin:0;
+	display:block;
+}
+.info li {
+	list-style-type:none;
+	margin:0;
+}
+
+.info span {
+	display:inline-block;
+	width:57%;
+	font-weight:bold;
+}
+
+.speed li {
+	text-align:center;
+	list-style-type:none;
+}
+
+.short_info li {
+	list-style-type:none;
+	margin:0;
+}
+.short_info span {
+	display:inline-block;
+	font-weight:bold;
+}
+
+/*Used to show dots of a trait*/
+.dots ul {
+	margin:0;
+	padding:0 10px 10px 10px;
+	display:block;
+}
+.dots li {
+	list-style-type:none;
+	text-align:right;
+}
+.dots span {
+	display:inline-block;
+	float:left;
+}
+
+
+.header, li.header {
+	text-align:center;
+	display:block;
+	font-weight:bold;
+	margin:0 auto;
+	margin-top:0.5em;
+}
+
+li.subheader {
+	text-align:center;
+	display:block;
+	font-style:italic;
+	font-size:0.875em;
+}
+
+
+/*Used in the Disciplines*/
+.disciplines .header {
+	text-align:right;
+	font-weight:bold;
+}
+
+li.levelname {
+	padding-left:20px;
+	text-align:left;
+}
+
+li.pool {
+	padding-left:50px;
+	text-align:left;
+	font-style:italic;
+	font-size:0.8em;
+}
+
+table.speed {
+	width:80%;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+table.borders{
+	border-collapse:collapse;
+}
+table.borders, .borders tr, .borders th, .borders td {
+	border:solid thin black;
+	padding:3px;
+}
+
+/*Used in Merits & Flaws*/
+.speed .header {
+	margin-top:0;
+}
+
+li.mech {
+	padding-left:30px;
+	text-align:left;
+	font-style:italic;
+	font-size:0.875em;
+}
+
+/*Used to display columns correctly*/
+hr {
+	clear:both;
+}
+
+.sheetcols2, .sheetcols2, .sheetcols3, .sheetcols4, .sheetcols5 {
+	width:100%;
+	margin:0;
+	vertical-align:top;
+}
+
+
+.sheetcols1 div {
+	width:100%;
+	display:inline-block;
+	vertical-align:top;
+	margin:0;
+	padding:0 5px;
+}
+
+.sheetcols2 div {
+	width:48%;
+	display:inline-block;
+	vertical-align:top;
+	margin:0;
+	padding:0 5px;
+}
+
+.sheetcols3 div {
+	width:30%;
+	display:inline-block;
+	vertical-align:top;
+	margin:0;
+	padding:0 5px;
+}
+
+.sheetcols4 div {
+	width:23%;
+	display:inline-block;
+	vertical-align:top;
+	margin:0;
+	padding:0 5px;
+}
+
+.sheetcols5 div {
+	width:18%;
+	display:inline-block;
+	vertical-align:top;
+	margin:0;
+	padding:0 5px;
+}
+
+.sheetcols5 span {
+	width:auto;
+	margin-right:5px;
+}

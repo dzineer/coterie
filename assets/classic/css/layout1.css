@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-color:#570208; /*Color around the outside of the content*/
+	background-image:url(background.gif);
+	background-attachment:fixed;
+}
+
+#body {
+	width:900px;
+	min-height:600px;
+	border-color:#330f0f;/*Border color. All borders are the same.*/
+	border-style:none solid solid;
+	border-width:5px;
+	background-color:#cccccc;/*Background color of main content*/
+	margin-top:0px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:5px;
+	padding:0;
+}
+
+#banner {
+	margin:0;
+	height:100px;
+	width:900px;
+}
+
+#change_char {
+	width:880px;
+	text-align:right;
+	border-color:#330f0f;/*Border color. All borders are the same.*/
+	padding:2px 10px;
+	color:#360000;/*Text color for change character box*/
+	background-color:#525252;/*Background color for change character box*/
+	position:relative;
+}
+
+#change_char select {
+	background-color:#993333;/*Color for change character selection*/
+}
+
+#change_char input[type=button] {
+	background-color:#330f0f;/*Color for change character button*/
+	color:#cccccc;/*Text color for button text*/
+	border:thin solid;
+	border-color:black;/*Border color for the button*/
+	border-radius: 0.75em;
+	-moz-border-radius: 0.75em;
+	-webkit-border-radius: 0.75em;
+}
+
+#change_char input[type=button]:hover {
+	background-color:#570208;/*Background color on button hover*/
+	color:#ffcccc;/*Text color on hover*/
+	border-color:black;/*Border color on button hover*/
+}
+
+#navbar {
+	margin:0 5px 5px;
+	width:150px;
+	border-color:#330f0f;/*Border color. All borders are the same.*/
+	border-style:none solid solid;
+	display:inline-block;
+	min-height:200px;
+	background-color:#525252;/*Default background color of navigation bar. Should match below*/
+}
+
+
+#navbar a {
+	padding-left:15px;
+	background-color:#525252; /*Default background color of navigation bar. Should match above*/
+	color:#cccccc;/*Default text color of navigation bar*/
+	width:135px;
+}
+
+#navbar a:hover {
+	color:#ffcccc;/*Text color for navigation bar on hover*/
+	background-color:#450000;/*Background highlight on hover*/
+}
+
+#navbar a:active {
+	color:white;/*Text color while like is clicked*/
+}
+
+/*This code governs the behavior of the pop-up menus.
+Ask Izzy to modify it if you want the links to have different
+colors than the main menu*/
+.hover span {
+	top:-5px;
+	left:150px;
+	border-color:#330f0f;/*Border color. All borders are the same.*/
+}
+
+.hover2 span {
+	bottom:-5px;
+	top:auto;
+}
+
+#body_content {
+	width:700px;
+}
