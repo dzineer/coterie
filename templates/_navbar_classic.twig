@@ -3,31 +3,31 @@
 	<div><a href="<?= root; ?>index.php">Home</a></div>
 
     {% if user.is_st %}
-	<div class="hover"><a href="{{ url_for('storytellers') }}">Storyteller Home</a>
+	<div class="hover"><a href="{{ url_for('storytellers', {}) }}">Storyteller Home</a>
 		<span>
-        <a href="{{ url_for('storytellers/edit_rumors') }}">Edit Rumors</a>
-		<a href="{{ url_for('storytellers/char_list') }}">Character List</a>
-		<a href="{{ url_for('storytellers/add') }}" onclick="return confirm_add()">Add Character</a>
-		<a href="{{ url_for('storytellers/other') }}">Edit Other</a>
-        <a href="{{ url_for('storytellers/game_dates') }}">Game Date Manager</a>
+        <a href="{{ url_for('storytellers/edit_rumors', {}) }}">Edit Rumors</a>
+		<a href="{{ url_for('storytellers/char_list', {}) }}">Character List</a>
+		<a href="{{ url_for('storytellers/add', {}) }}" onclick="return confirm_add()">Add Character</a>
+		<a href="{{ url_for('storytellers/other', {}) }}">Edit Other</a>
+        <a href="{{ url_for('storytellers/game_dates', {}) }}">Game Date Manager</a>
         </span></div>
     {% endif %}
 
-    <div><a href="{{ url_for('select_sheets') }}">Character Sheets</a></div>
+    <div><a href="{{ url_for('select_sheets', {}) }}">Character Sheets</a></div>
     
     {% if user.is_st %}
     <div class="hover">
-        <a href="{{ url_for('sheets'), {'char_id': character.id} }}">{{character.name}}</a>
+        <a href="{{ url_for('sheets', {'char_id': character.id}) }}">{{character.name}}</a>
     	<span>
-        <a href="{{ url_for('storytellers/edit_char'), {'char_id': character.id} }}">Edit {{character.name}}</a>
-        <a href="{{ url_for('storytellers/edit_influences'), {'char_id': character.id} }}">{{character.name}} Influences</a>
-		<a href="{{ url_for('storytellers/edit_boons'), {'char_id': character.id} }}">{{character.name}} Boons</a>
-        <a href="{{ url_for('rumors'), {'char_id': character.id} }}">{{character.name}} Rumors</a>
+        <a href="{{ url_for('storytellers/edit_char', {'char_id': character.id}) }}">Edit {{character.name}}</a>
+        <a href="{{ url_for('storytellers/edit_influences', {'char_id': character.id}) }}">{{character.name}} Influences</a>
+		<a href="{{ url_for('storytellers/edit_boons', {'char_id': character.id}) }}">{{character.name}} Boons</a>
+        <a href="{{ url_for('rumors', {'char_id': character.id}) }}">{{character.name}} Rumors</a>
         </span>
     </div>
     {% endif %}
 	{% if user.is_st == false %}
-        <div><a href="{{ url_for('sheets'), {'char_id': character.id} }}">{{character.name}}</a></div>
+        <div><a href="{{ url_for('sheets', {'char_id': character.id}) }}">{{character.name}}</a></div>
     {% endif %}
     
 	{# <div class="hover"><a href="<?= root; ?>influences/actions.php">Influences</a>
@@ -96,11 +96,11 @@
         </span></div> #}
         
         
-	<div><a href="{{ url_for('player_info') }}">Password/Email</a></div>
-	<div><a href="{{ url_for('logout') }}">Log out</a></div>
+	<div><a href="{{ url_for('player_info', {}) }}">Password/Email</a></div>
+	<div><a href="{{ url_for('logout', {}) }}">Log out</a></div>
 {% endif %}
 
 {% if user == false %}
-	<div><a href="{{ url_for('login') }}">Log In</a></div>
+	<div><a href="{{ url_for('login', {}) }}">Log In</a></div>
 {% endif %}
 </div>
