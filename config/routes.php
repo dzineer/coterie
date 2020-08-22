@@ -24,7 +24,7 @@ return function (App $app) {
         return $this->get('view')->render($response, 'index.twig', [
             'user' => false
         ]);
-    });
+    })->setName('login');
 
     $app->group('/users', function (Group $group) {
         $group->get('', ListUsersAction::class);
