@@ -20,6 +20,12 @@ return function (App $app) {
         ]);
     });
 
+    $app->get('/login', function (Request $request, Response $response) {
+        return $this->get('view')->render($response, 'index.twig', [
+            'user' => false
+        ]);
+    });
+
     $app->group('/users', function (Group $group) {
         $group->get('', ListUsersAction::class);
         $group->get('/{id}', ViewUserAction::class);
