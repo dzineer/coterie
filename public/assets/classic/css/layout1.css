@@ -3,7 +3,7 @@
 
 body {
 	background-color:#570208; /*Color around the outside of the content*/
-	background-image:url(background.gif);
+	background-image:url(../background.gif);
 	background-attachment:fixed;
 }
 
